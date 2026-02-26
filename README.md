@@ -24,8 +24,8 @@
 `scrapy crawl yahoo_news_last_hour -a mode=newest`
 
 ## 2.hours
-要收集的時間範圍（單位：小時）。
-預設`1`小時
+要收集的時間範圍（單位：小時）。  
+預設`1`小時  
 `scrapy crawl yahoo_news_last_hour -a hours=3`
 
 ## 3.buffer_minutes
@@ -35,10 +35,10 @@ Yahoo archive 列表可能出現：
 - 排序混合
 - 快照落差
 
-因此爬蟲會先多抓一段時間，再於最後精準裁切
-預設`20`分鐘
+因此爬蟲會先多抓一段時間，再於最後精準裁切  
+預設`20`分鐘  
 `scrapy crawl yahoo_news_last_hour -a buffer_minutes=30`
-# 輸出結果
+# 輸出結果  
 爬蟲會輸出 CSV 檔案
 檔名包含：
 
