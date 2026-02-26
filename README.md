@@ -11,8 +11,7 @@
 - 使用 buffer 機制避免 Yahoo 更新延遲造成缺漏
 - 輸出 Excel 可直接開啟的 UTF-8 CSV
 - 支援多種時間窗口定義模式
-
-可透過 -a 傳入參數。
+- 可透過 -a 傳入參數。
 
 ## 1.mode
 決定「時間窗口的結束時間」。
@@ -26,6 +25,8 @@
 
 ## 2.hours
 要收集的時間範圍（單位：小時）。
+預設`1`小時
+`scrapy crawl yahoo_news_last_hour -a hours=3`
 
 ## 3.buffer_minutes
 Yahoo archive 列表可能出現：
@@ -35,7 +36,9 @@ Yahoo archive 列表可能出現：
 - 快照落差
 
 因此爬蟲會先多抓一段時間，再於最後精準裁切
-
+預設`20`分鐘
+`scrapy crawl yahoo_news_last_hour -a buffer_minutes=30`
+# 輸出結果
 爬蟲會輸出 CSV 檔案
 檔名包含：
 
