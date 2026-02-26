@@ -22,7 +22,7 @@
 | finish | 以程式結束時間為窗口上界        |
 | newest | 以抓到的最新新聞時間為窗口上界（推薦） |
 
-scrapy crawl yahoo_listservice_last_hour -a mode=newest
+`scrapy crawl yahoo_news_last_hour -a mode=newest`
 
 ## 2.hours
 要收集的時間範圍（單位：小時）。
